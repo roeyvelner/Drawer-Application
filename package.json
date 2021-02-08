@@ -1,0 +1,59 @@
+{
+  "name": "exam",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^12.19.16",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "bootstrap": "^4.6.0",
+    "dotenv": "^8.2.0",
+    "formik": "^2.2.6",
+    "listbox": "^0.1.6",
+    "pusher-js": "^7.0.3",
+    "react": "^17.0.1",
+    "react-color": "^2.19.3",
+    "react-dom": "^17.0.1",
+    "react-dotenv": "^0.1.3",
+    "react-listbox": "^1.2.13",
+    "react-scripts": "4.0.2",
+    "react-sketch-canvas": "^5.3.1",
+    "socket.io": "^3.1.1",
+    "socket.io-client": "^3.1.1",
+    "typescript": "^4.1.3",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.1.0",
+    "yup": "^0.32.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "webpack-s3-plugin": "^1.2.0-rc.0"
+  }
+}
