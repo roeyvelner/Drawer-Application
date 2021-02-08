@@ -14,6 +14,13 @@ class CanvasServer extends Component {
     this.userStrokeStyle = props.color;
     // this.guestStrokeStyle = props.color;
     
+    // ///For mobile  has problems with mobile
+    // this.onTouchStart = this.onMouseDown.bind(this);
+    // this.onTouchMove= this.onMouseMove.bind(this);
+    // this.onTouchEnd=this.endPaintEvent.bind(this);
+   
+
+
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onMouseMove = this.onMouseMove.bind(this);
     this.endPaintEvent = this.endPaintEvent.bind(this);
@@ -30,6 +37,11 @@ class CanvasServer extends Component {
   prevPos = { offsetX: 0, offsetY: 0 };
 
   onMouseDown({ nativeEvent }) {
+    // fetch('http://localhost:4000/Log', {
+    //             method: 'POST',
+    //             headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    //             body:  JSON.stringify({body: "get mouse event"})
+    // })
     const { offsetX, offsetY } = nativeEvent;
     this.isPainting = true;
     this.prevPos = { offsetX, offsetY };
@@ -116,10 +128,17 @@ class CanvasServer extends Component {
       <canvas
         ref={(ref) => (this.canvas = ref)}
         style={{ background: 'black'}}
+
         onMouseDown={this.onMouseDown}
         onMouseLeave={this.endPaintEvent}
         onMouseUp={this.endPaintEvent}
         onMouseMove={this.onMouseMove}
+        
+        // ///For mobile has problems with mobile
+        // onTouchStart={this.onMouseDown}
+        // onTouchEnd={this.endPaintEvent}
+        // onTouchMove={this.onMouseMove}
+      
       />
     );
   }

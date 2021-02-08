@@ -33,7 +33,6 @@ export function StartPage({startState,SetstartState,SetusersList}){
     async function GotoRoom(values){
         SetstartState({name:values.name,team:startState.team})
         try{
-
             const response  = await fetch('http://drawserver-env.eba-kdm2hg7h.us-east-2.elasticbeanstalk.com/users/'+startState.team, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
@@ -42,6 +41,7 @@ export function StartPage({startState,SetstartState,SetusersList}){
             const users = await response.json();
             console.log("This is the Users = " + users);
             SetusersList(users);
+            
         }
         catch(err){
             console.log("Err while POST user name");
